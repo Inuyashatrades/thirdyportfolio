@@ -2,6 +2,7 @@ export type Project = {
   id: string;
   title: string;
   category: string;
+  hideCategory?: boolean;
   // Use the video's real frame ratio. Supported values automatically control
   // both the work grid and the expanded video player.
   aspectRatio: "9:16" | "4:3" | "16:9";
@@ -51,8 +52,9 @@ export const projects: Project[] = [
   {
     id: "short-form-01",
     // Replace this placeholder title and description with the real client/campaign.
-    title: "Short-form Edit 01",
+    title: "Facebook Reel 01",
     category: "Facebook Reel",
+    hideCategory: true,
     aspectRatio: "9:16",
     year: "2024",
     description:
@@ -68,8 +70,9 @@ export const projects: Project[] = [
   {
     id: "short-form-02",
     // Replace this placeholder title and description with the real client/campaign.
-    title: "Short-form Edit 02",
+    title: "Facebook Reel 02",
     category: "Facebook Reel",
+    hideCategory: true,
     aspectRatio: "9:16",
     year: "2024",
     description:
@@ -85,8 +88,9 @@ export const projects: Project[] = [
   {
     id: "short-form-03",
     // Replace this placeholder title and description with the real client/campaign.
-    title: "Short-form Edit 03",
+    title: "Facebook Reel 03",
     category: "Facebook Reel",
+    hideCategory: true,
     aspectRatio: "9:16",
     year: "2025",
     description:

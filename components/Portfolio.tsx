@@ -44,7 +44,7 @@ function ProjectCard({ project, index, onSelect }: { project: Project; index: nu
           {project.youtubeId && <iframe src={`https://www.youtube-nocookie.com/embed/${project.youtubeId}?controls=0&mute=1&rel=0${project.youtubeStart ? `&start=${project.youtubeStart}` : ""}`} title={`${project.title} preview`} loading="lazy" tabIndex={-1} aria-hidden="true" />}
           <span className="project-number">0{index + 1}</span><span className="project-action">View <Arrow /></span>
         </span>
-        <span className="project-meta"><span><strong>{project.title}</strong><small>{project.category}</small></span><small>{project.year}</small></span>
+        <span className="project-meta"><span><strong>{project.title}</strong>{!project.hideCategory && <small>{project.category}</small>}</span><small>{project.year}</small></span>
         {project.analytics && <span className="project-analytics" aria-label={`${project.analytics.views} views, ${project.analytics.reactions} reactions, ${project.analytics.shares} shares`}><span><strong>{project.analytics.views}</strong><small>Views</small></span><span><strong>{project.analytics.reactions}</strong><small>Reacts</small></span><span><strong>{project.analytics.shares}</strong><small>Shares</small></span></span>}
         <button className="project-open" type="button" onClick={() => onSelect(project)} onFocus={playPreview} onBlur={stopPreview} aria-label={`View ${project.title}`}><span className="sr-only">View {project.title}</span></button>
       </article>
