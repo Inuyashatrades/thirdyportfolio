@@ -10,6 +10,11 @@ export type Project = {
   role: string;
   tools: string[];
   outcome: string;
+  analytics?: {
+    views: string;
+    reactions: string;
+    shares: string;
+  };
   previewVideo?: string;
   fullVideo?: string;
   youtubeId?: string;
@@ -55,6 +60,7 @@ export const projects: Project[] = [
     role: "Video specialist",
     tools: ["Premiere Pro", "After Effects"],
     outcome: "A concise 1:02 social cut designed to hold attention from the opening frame.",
+    analytics: { views: "71K", reactions: "1.7K", shares: "274" },
     previewVideo: "/videos/short-form-01.mp4",
     fullVideo: "/videos/short-form-01.mp4",
     accent: "#ce532f",
@@ -71,6 +77,7 @@ export const projects: Project[] = [
     role: "Video specialist",
     tools: ["Premiere Pro", "After Effects"],
     outcome: "A focused 1:09 vertical cut prepared for social distribution.",
+    analytics: { views: "140K", reactions: "4.1K", shares: "502" },
     previewVideo: "/videos/short-form-02.mp4",
     fullVideo: "/videos/short-form-02.mp4",
     accent: "#695a8d",
@@ -87,6 +94,7 @@ export const projects: Project[] = [
     role: "Video specialist",
     tools: ["Premiere Pro", "After Effects"],
     outcome: "A 3:23 vertical piece with a clear progression and social-first presentation.",
+    analytics: { views: "337K", reactions: "8.1K", shares: "1.4K" },
     previewVideo: "/videos/short-form-03.mp4",
     fullVideo: "/videos/short-form-03.mp4",
     accent: "#256d73",
