@@ -52,9 +52,9 @@ export const projects: Project[] = [
     id: "short-form-01",
     // Replace this placeholder title and description with the real client/campaign.
     title: "Short-form Edit 01",
-    category: "Social Video",
+    category: "Facebook Reel",
     aspectRatio: "9:16",
-    year: "2026",
+    year: "2024",
     description:
       "A vertical social edit shaped for a fast hook, clear pacing, and mobile-first viewing.",
     role: "Video specialist",
@@ -69,9 +69,9 @@ export const projects: Project[] = [
     id: "short-form-02",
     // Replace this placeholder title and description with the real client/campaign.
     title: "Short-form Edit 02",
-    category: "Social Video",
+    category: "Facebook Reel",
     aspectRatio: "9:16",
-    year: "2025",
+    year: "2024",
     description:
       "A mobile-first edit balancing quick visual changes with a clean, readable story.",
     role: "Video specialist",
@@ -86,7 +86,7 @@ export const projects: Project[] = [
     id: "short-form-03",
     // Replace this placeholder title and description with the real client/campaign.
     title: "Short-form Edit 03",
-    category: "Vertical Story",
+    category: "Facebook Reel",
     aspectRatio: "9:16",
     year: "2025",
     description:
