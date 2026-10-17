@@ -1,6 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { projects, siteConfig, skills, tools, type Project } from "@/data/projects";
 
@@ -79,7 +80,7 @@ export default function Portfolio() {
     <><Header /><main>
       <section className="hero" id="top" aria-labelledby="hero-title">
         <div className="hero-copy"><p className="kicker">Hi, I&apos;m Thirdy — video editor &amp; creative partner</p><h1 id="hero-title">Your search for a <span>video editor</span> ends here.</h1><p className="hero-statement">Hire someone who thinks strategically, not just executes.</p><div className="hero-actions"><a className="button button-primary" href="#work">View my work <Arrow /></a><a className="text-link" href="#contact">Start a project →</a></div></div>
-        <div className="hero-visual" aria-label="Featured video edit preview"><div className="shape shape-purple" /><div className="shape shape-lime" /><div className="edit-badge">⌘ CUT</div><div className="availability">Available for projects</div><div className="hero-frame"><video autoPlay muted loop playsInline preload="metadata" aria-label="Short-form editing preview"><source src="/videos/short-form-01.mp4" type="video/mp4" /></video></div><div className="spark" aria-hidden="true">✦</div></div>
+        <div className="hero-visual" aria-label="Portrait of Thirdy Razon"><div className="shape shape-purple" /><div className="shape shape-lime" /><div className="edit-badge">⌘ CUT</div><div className="availability">Available for projects</div><div className="hero-portrait"><Image src="/images/thirdy-portrait-cutout.png" alt="Thirdy Razon, video editor" fill priority sizes="(max-width: 900px) 92vw, 46vw" /></div><div className="spark" aria-hidden="true">✦</div></div>
       </section>
       <section className="work-section" id="work" aria-labelledby="work-title"><h2 className="sr-only" id="work-title">Selected work</h2><div className="project-grid">{projects.map((project, index) => <ProjectCard key={project.id} project={project} index={index} onSelect={setActiveProject} />)}</div></section>
       <section className="about-section" id="about" aria-labelledby="about-title"><Reveal className="about-lead"><p className="kicker">Behind the edits</p><h2 id="about-title">I don&apos;t just assemble footage. <span>I find the idea.</span></h2></Reveal><div className="about-grid"><Reveal className="about-copy"><p>{siteConfig.bio}</p><p>{siteConfig.philosophy}</p></Reveal><Reveal className="tool-panel" delay={0.08}><div><p className="detail-label">What I do</p><ul>{skills.map((skill) => <li key={skill}>{skill}</li>)}</ul></div><div><p className="detail-label">My toolkit</p><ul>{tools.map((tool) => <li key={tool}>{tool}</li>)}</ul></div></Reveal></div></section>
