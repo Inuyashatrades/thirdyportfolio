@@ -26,8 +26,11 @@ Open `data/projects.ts`.
 - Change `siteConfig` to update the name, role, bio, email, and social links.
 - Edit the `projects` array to change titles, descriptions, roles, tools, and
   outcomes.
-- Replace `thumbnail`, `previewVideo`, and `fullVideo` with your own hosted
-  files or paths to assets placed in `public`.
+- Set `aspectRatio` to `"9:16"`, `"4:3"`, or `"16:9"` so every project keeps
+  its real video shape in both the grid and expanded player.
+- Replace `previewVideo` and `fullVideo` with your own hosted files or paths to
+  assets placed in `public`. Project cards use the video itself, not a separate
+  cover image.
 - For a YouTube project, use `youtubeId: "VIDEO_ID"` instead of `fullVideo`.
   The ID is the part after `v=` in a YouTube URL. Add `youtubeStart: 14` when
   the embedded video should begin 14 seconds in.
