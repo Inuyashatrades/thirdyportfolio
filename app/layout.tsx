@@ -2,17 +2,21 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Thirdy — Video Editor",
+  metadataBase: new URL("https://thirdyrazon.com"),
+  title: "Thirdy Razon — Strategic Video Editor",
   description:
-    "Video editor crafting story-driven films, brand work, and motion.",
+    "Strategic video editor for short-form, long-form, and story-driven content.",
   icons: {
     icon: "/favicon.svg",
   },
   openGraph: {
-    title: "Thirdy — Video Editor",
-    description: "Stories live in the cut.",
+    title: "Thirdy Razon — Strategic Video Editor",
+    description: "Your search for a video editor ends here.",
+    url: "https://thirdyrazon.com",
+    siteName: "Thirdy Razon",
     type: "website",
   },
+  alternates: { canonical: "https://thirdyrazon.com" },
 };
 
 export default function RootLayout({

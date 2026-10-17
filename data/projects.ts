@@ -17,12 +17,12 @@ export type Project = {
 };
 
 export const siteConfig = {
-  // Replace these identity details with your own.
-  name: "Thirdy",
-  role: "Video Editor",
-  statement: "Story-driven cuts for brands and film.",
-  email: "hello@thirdy.studio",
-  bio: "I shape raw footage into clear, emotionally precise stories. Every cut earns its place, every frame moves the story forward.",
+  // Replace contact and social links below with your live accounts.
+  name: "Thirdy Razon",
+  role: "Video Editor & Creative Partner",
+  statement: "Your search for a video editor ends here. Hire someone who thinks strategically, not just executes.",
+  email: "hello@thirdyrazon.com",
+  bio: "I shape raw footage into clear, emotionally precise stories that serve a real goal—not just a trend. Every cut earns its place, and every frame moves the message forward.",
   philosophy:
     "My process starts with feeling, then finds its rhythm—balancing performance, sound, motion, and color into work that stays with the audience.",
   socials: [
