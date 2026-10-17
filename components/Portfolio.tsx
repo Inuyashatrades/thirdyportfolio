@@ -63,7 +63,7 @@ function ProjectDialog({ project, onClose, onNext }: { project: Project; onClose
     <motion.div className="project-dialog" role="dialog" aria-modal="true" aria-labelledby="project-dialog-title" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
       <button className="dialog-close" type="button" onClick={onClose} autoFocus>Close ×</button>
       <motion.div className="dialog-content" initial={{ y: 24 }} animate={{ y: 0 }} transition={{ duration: 0.42 }}>
-        <p className="kicker">{project.category} / {project.year}</p><h2 id="project-dialog-title">{project.title}</h2><p className="dialog-lead">{project.description}</p>
+        {!project.hideCategory && <p className="kicker">{project.category} / {project.year}</p>}<h2 id="project-dialog-title">{project.title}</h2><p className="dialog-lead">{project.description}</p>
         <div className={`dialog-video ${ratioClass}`}>
           {project.youtubeId ? <iframe src={`https://www.youtube-nocookie.com/embed/${project.youtubeId}?rel=0${project.youtubeStart ? `&start=${project.youtubeStart}` : ""}`} title={`${project.title} video`} loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen /> : <video controls playsInline preload="metadata"><source src={project.fullVideo} type="video/mp4" /></video>}
         </div>

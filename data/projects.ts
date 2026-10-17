@@ -52,7 +52,7 @@ export const projects: Project[] = [
   {
     id: "short-form-01",
     // Replace this placeholder title and description with the real client/campaign.
-    title: "Facebook Reel 01",
+    title: "Facebook Reel",
     category: "Facebook Reel",
     hideCategory: true,
     aspectRatio: "9:16",
@@ -70,7 +70,7 @@ export const projects: Project[] = [
   {
     id: "short-form-02",
     // Replace this placeholder title and description with the real client/campaign.
-    title: "Facebook Reel 02",
+    title: "Facebook Reel",
     category: "Facebook Reel",
     hideCategory: true,
     aspectRatio: "9:16",
@@ -88,7 +88,7 @@ export const projects: Project[] = [
   {
     id: "short-form-03",
     // Replace this placeholder title and description with the real client/campaign.
-    title: "Facebook Reel 03",
+    title: "Facebook Reel",
     category: "Facebook Reel",
     hideCategory: true,
     aspectRatio: "9:16",
