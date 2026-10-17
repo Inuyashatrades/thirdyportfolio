@@ -7,7 +7,6 @@ import { projects, siteConfig, skills, tools, type Project } from "@/data/projec
 
 const navItems = [
   { label: "Work", href: "#work" },
-  { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
 ];
 
@@ -71,12 +70,6 @@ function ProjectDialog({ project, onClose, onNext }: { project: Project; onClose
   );
 }
 
-const services = [
-  { number: "01", title: "Short-form editing", copy: "Fast hooks, clean pacing, and retention-focused edits built for mobile feeds.", color: "purple" },
-  { number: "02", title: "Long-form editing", copy: "Structured storytelling that keeps educational and narrative content moving.", color: "lime" },
-  { number: "03", title: "Creative strategy", copy: "Editorial decisions guided by audience, platform, message, and business goals.", color: "green" },
-];
-
 export default function Portfolio() {
   const [activeProject, setActiveProject] = useState<Project | null>(null);
   const nextProject = () => { if (activeProject) { const index = projects.findIndex((project) => project.id === activeProject.id); setActiveProject(projects[(index + 1) % projects.length]); } };
@@ -86,8 +79,7 @@ export default function Portfolio() {
         <div className="hero-copy"><p className="kicker">Hi, I&apos;m Thirdy — video editor &amp; creative partner</p><h1 id="hero-title">Your search for a <span>video editor</span> ends here.</h1><p className="hero-statement">Hire someone who thinks strategically, not just executes.</p><div className="hero-actions"><a className="button button-primary" href="#work">View my work <Arrow /></a><a className="text-link" href="#contact">Start a project →</a></div></div>
         <div className="hero-visual" aria-label="Featured video edit preview"><div className="shape shape-purple" /><div className="shape shape-lime" /><div className="edit-badge">⌘ CUT</div><div className="availability">Available for projects</div><div className="hero-frame"><video autoPlay muted loop playsInline preload="metadata" aria-label="Short-form editing preview"><source src="/videos/short-form-01.mp4" type="video/mp4" /></video></div><div className="spark" aria-hidden="true">✦</div></div>
       </section>
-      <section className="services-section" id="services" aria-labelledby="services-title"><div className="section-label"><p>More than clean cuts</p><h2 id="services-title">What I bring to the timeline</h2></div><div className="service-grid">{services.map((service) => <Reveal className="service-card" key={service.number}><span className={`service-icon ${service.color}`}>{service.number}</span><h3>{service.title}</h3><p>{service.copy}</p></Reveal>)}</div></section>
-      <section className="work-section" id="work" aria-labelledby="work-title"><div className="section-heading"><div><p className="kicker">Selected work / 2025–2026</p><h2 id="work-title">Work that earns attention.</h2></div><p>From quick social hooks to complete long-form narratives, every edit starts with the same question: what should the audience feel and do next?</p></div><div className="project-grid">{projects.map((project, index) => <ProjectCard key={project.id} project={project} index={index} onSelect={setActiveProject} />)}</div></section>
+      <section className="work-section" id="work" aria-labelledby="work-title"><h2 className="sr-only" id="work-title">Selected work</h2><div className="project-grid">{projects.map((project, index) => <ProjectCard key={project.id} project={project} index={index} onSelect={setActiveProject} />)}</div></section>
       <section className="about-section" id="about" aria-labelledby="about-title"><Reveal className="about-lead"><p className="kicker">Behind the edits</p><h2 id="about-title">I don&apos;t just assemble footage. <span>I find the idea.</span></h2></Reveal><div className="about-grid"><Reveal className="about-copy"><p>{siteConfig.bio}</p><p>{siteConfig.philosophy}</p></Reveal><Reveal className="tool-panel" delay={0.08}><div><p className="detail-label">What I do</p><ul>{skills.map((skill) => <li key={skill}>{skill}</li>)}</ul></div><div><p className="detail-label">My toolkit</p><ul>{tools.map((tool) => <li key={tool}>{tool}</li>)}</ul></div></Reveal></div></section>
       <section className="contact-section" id="contact" aria-labelledby="contact-title"><p className="kicker">Need an editor who sees the bigger picture?</p><h2 id="contact-title">Let&apos;s make your next video impossible to ignore.</h2><div className="contact-row"><a className="button button-dark" href={`mailto:${siteConfig.email}`}>Email Thirdy <Arrow /></a><p>{siteConfig.email}</p></div></section>
     </main><footer><p>Thirdy Razon © 2026</p><p>Video editor · Philippines</p><a href="#top">Back to top ↑</a></footer><AnimatePresence mode="wait">{activeProject && <ProjectDialog key={activeProject.id} project={activeProject} onClose={() => setActiveProject(null)} onNext={nextProject} />}</AnimatePresence></>
