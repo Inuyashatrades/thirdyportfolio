@@ -1,4 +1,4 @@
-# Thirdy — Video Editor Portfolio
+# Thirdy — Video Specialist Portfolio
 
 A cinematic, single-page portfolio built with Next.js, TypeScript, Tailwind CSS,
 and Framer Motion. Project content is centralized so the work can be updated

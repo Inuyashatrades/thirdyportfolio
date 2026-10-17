@@ -20,8 +20,8 @@ export type Project = {
 export const siteConfig = {
   // Replace contact and social links below with your live accounts.
   name: "Thirdy Razon",
-  role: "Video Editor & Creative Partner",
-  statement: "Your search for a video editor ends here. Hire someone who thinks strategically, not just executes.",
+  role: "Video Specialist & Creative Partner",
+  statement: "Your search for a video specialist ends here. Hire someone who thinks strategically, not just executes.",
   email: "hello@thirdyrazon.com",
   bio: "I shape raw footage into clear, emotionally precise stories that serve a real goal—not just a trend. Every cut earns its place, and every frame moves the message forward.",
   philosophy:
@@ -52,7 +52,7 @@ export const projects: Project[] = [
     year: "2026",
     description:
       "A vertical social edit shaped for a fast hook, clear pacing, and mobile-first viewing.",
-    role: "Video editor",
+    role: "Video specialist",
     tools: ["Premiere Pro", "After Effects"],
     outcome: "A concise 1:02 social cut designed to hold attention from the opening frame.",
     previewVideo: "/videos/short-form-01.mp4",
@@ -68,7 +68,7 @@ export const projects: Project[] = [
     year: "2025",
     description:
       "A mobile-first edit balancing quick visual changes with a clean, readable story.",
-    role: "Video editor",
+    role: "Video specialist",
     tools: ["Premiere Pro", "After Effects"],
     outcome: "A focused 1:09 vertical cut prepared for social distribution.",
     previewVideo: "/videos/short-form-02.mp4",
@@ -84,7 +84,7 @@ export const projects: Project[] = [
     year: "2025",
     description:
       "A longer vertical story edited for sustained rhythm while keeping the frame active and direct.",
-    role: "Video editor",
+    role: "Video specialist",
     tools: ["Premiere Pro", "After Effects"],
     outcome: "A 3:23 vertical piece with a clear progression and social-first presentation.",
     previewVideo: "/videos/short-form-03.mp4",
@@ -99,7 +99,7 @@ export const projects: Project[] = [
     year: "2026",
     description:
       "A long-form educational breakdown edited to turn a live client conversation into a clear, engaging narrative.",
-    role: "Long-form video editor",
+    role: "Long-form video specialist",
     tools: ["Premiere Pro", "After Effects"],
     outcome: "A structured YouTube edit balancing instruction, pacing, and viewer retention.",
     youtubeId: "LbEj4ohiEaQ",
@@ -113,7 +113,7 @@ export const projects: Project[] = [
     year: "2026",
     description:
       "A practical YouTube explainer shaped around clarity, forward momentum, and an accessible visual rhythm.",
-    role: "Long-form video editor",
+    role: "Long-form video specialist",
     tools: ["Premiere Pro", "After Effects"],
     outcome: "An information-dense edit designed to keep the presentation direct and watchable.",
     youtubeId: "YpotNywZjxM",
@@ -128,7 +128,7 @@ export const projects: Project[] = [
     year: "2026",
     description:
       "A complete long-form piece edited with patient pacing, visual continuity, and a cinematic widescreen presentation.",
-    role: "Long-form video editor",
+    role: "Long-form video specialist",
     tools: ["Premiere Pro", "After Effects", "DaVinci Resolve"],
     outcome: "A polished 16:58 narrative delivered as a complete YouTube feature.",
     youtubeId: "aEf0zjhM4Vg",
