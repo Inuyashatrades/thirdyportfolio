@@ -36,7 +36,7 @@ function ProjectCard({ project, index, onSelect }: { project: Project; index: nu
   const playPreview = () => videoRef.current?.play().catch(() => undefined);
   const stopPreview = () => { if (videoRef.current) { videoRef.current.pause(); videoRef.current.currentTime = 0; } };
   return (
-    <Reveal className="project-reveal" delay={(index % 2) * 0.06}>
+    <Reveal className={`project-reveal ${ratioClass}`} delay={(index % 4) * 0.05}>
       <article className="project-card" onMouseEnter={playPreview} onMouseLeave={stopPreview}>
         <span className={`project-media ${ratioClass}`}>
           {project.previewVideo && <video ref={videoRef} muted loop playsInline preload="metadata" aria-hidden="true"><source src={project.previewVideo} type="video/mp4" /></video>}
