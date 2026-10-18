@@ -34,6 +34,9 @@ function Header() {
 function ProjectCard({ project, index, onSelect }: { project: Project; index: number; onSelect: (project: Project) => void }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const ratioClass = `ratio-${project.aspectRatio.replace(":", "-")}`;
+  const analyticsLabel = project.analytics
+    ? `${project.analytics.views} views${project.analytics.platform ? ` on ${project.analytics.platform}` : ""}${project.analytics.reactions ? `, ${project.analytics.reactions} reactions` : ""}${project.analytics.shares ? `, ${project.analytics.shares} shares` : ""}`
+    : undefined;
   const playPreview = () => videoRef.current?.play().catch(() => undefined);
   const stopPreview = () => { if (videoRef.current) { videoRef.current.pause(); videoRef.current.currentTime = 0; } };
   useEffect(() => {
@@ -57,7 +60,7 @@ function ProjectCard({ project, index, onSelect }: { project: Project; index: nu
           <span className="project-number">0{index + 1}</span><span className="project-action">View <Arrow /></span>
         </span>
         <span className="project-meta"><span><strong>{project.title}</strong>{!project.hideCategory && <small>{project.category}</small>}</span><small>{project.year}</small></span>
-        {project.analytics && <span className="project-analytics" aria-label={`${project.analytics.views} views, ${project.analytics.reactions} reactions, ${project.analytics.shares} shares`}><span><strong>{project.analytics.views}</strong><small>Views</small></span><span><strong>{project.analytics.reactions}</strong><small>Reacts</small></span><span><strong>{project.analytics.shares}</strong><small>Shares</small></span></span>}
+        {project.analytics && <span className={`project-analytics ${!project.analytics.reactions && !project.analytics.shares ? "is-single" : ""}`} aria-label={analyticsLabel}><span><strong>{project.analytics.views}</strong><small>{project.analytics.platform ? `Views · ${project.analytics.platform}` : "Views"}</small></span>{project.analytics.reactions && <span><strong>{project.analytics.reactions}</strong><small>Reacts</small></span>}{project.analytics.shares && <span><strong>{project.analytics.shares}</strong><small>Shares</small></span>}</span>}
         <button className="project-open" type="button" onClick={() => onSelect(project)} onFocus={playPreview} onBlur={stopPreview} aria-label={`View ${project.title}`}><span className="sr-only">View {project.title}</span></button>
       </article>
     </Reveal>

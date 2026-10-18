@@ -13,8 +13,9 @@ export type Project = {
   outcome: string;
   analytics?: {
     views: string;
-    reactions: string;
-    shares: string;
+    reactions?: string;
+    shares?: string;
+    platform?: string;
   };
   previewVideo?: string;
   // A frame exported from the same video, shown only while mobile Safari loads
@@ -107,38 +108,6 @@ export const projects: Project[] = [
     accent: "#256d73",
   },
   {
-    id: "hla-testimonial-erieka",
-    title: "HLA Student Testimonial — Erieka",
-    category: "Testimonial",
-    aspectRatio: "9:16",
-    year: "2026",
-    description:
-      "A concise student testimonial shaped around an authentic voice, readable captions, and a clear emotional takeaway.",
-    role: "Video specialist",
-    tools: ["Premiere Pro", "After Effects"],
-    outcome: "A polished 20-second vertical testimonial prepared for social-first viewing.",
-    previewVideo: "/videos/testimonial-01.mp4?v=1",
-    previewPoster: "/videos/testimonial-01-frame.jpg",
-    fullVideo: "/videos/testimonial-01.mp4?v=1",
-    accent: "#3958d4",
-  },
-  {
-    id: "hla-testimonial-laurice",
-    title: "HLA Student Testimonial — Laurice",
-    category: "Testimonial",
-    aspectRatio: "9:16",
-    year: "2026",
-    description:
-      "A direct-to-camera testimonial refined with strong typography, focused pacing, and a consistent branded treatment.",
-    role: "Video specialist",
-    tools: ["Premiere Pro", "After Effects"],
-    outcome: "A focused 22-second vertical testimonial designed for clear mobile communication.",
-    previewVideo: "/videos/testimonial-02.mp4?v=1",
-    previewPoster: "/videos/testimonial-02-frame.jpg",
-    fullVideo: "/videos/testimonial-02.mp4?v=1",
-    accent: "#293a88",
-  },
-  {
     id: "highlevel-commercial",
     title: "HighLevel Commercial",
     category: "Commercial",
@@ -153,6 +122,36 @@ export const projects: Project[] = [
     previewPoster: "/videos/commercial-frame.jpg",
     fullVideo: "/videos/commercial.mp4?v=1",
     accent: "#cc2b77",
+  },
+  {
+    id: "work-from-home-guide",
+    title: "Your Guide to $1,500/Month WFH Jobs",
+    category: "YouTube",
+    aspectRatio: "16:9",
+    year: "2026",
+    description:
+      "A practical work-from-home guide edited for clarity, retention, and an accessible step-by-step flow.",
+    role: "Long-form video specialist",
+    tools: ["Premiere Pro", "After Effects"],
+    outcome: "A focused YouTube edit that reached 28K views.",
+    analytics: { views: "28K", platform: "YouTube" },
+    youtubeId: "qa0pgGd-AVE",
+    accent: "#c9402f",
+  },
+  {
+    id: "wfh-websites-beginners",
+    title: "5 WFH Websites for Beginners",
+    category: "YouTube",
+    aspectRatio: "16:9",
+    year: "2026",
+    description:
+      "A beginner-friendly YouTube feature structured around five actionable work-from-home resources.",
+    role: "Long-form video specialist",
+    tools: ["Premiere Pro", "After Effects"],
+    outcome: "A clear, retention-focused edit that reached 15K views.",
+    analytics: { views: "15K", platform: "YouTube" },
+    youtubeId: "h7z9cIh9yeQ",
+    accent: "#256d73",
   },
   {
     id: "sales-call-breakdown",
@@ -196,6 +195,38 @@ export const projects: Project[] = [
     outcome: "A polished 16:58 narrative delivered as a complete YouTube feature.",
     youtubeId: "aEf0zjhM4Vg",
     accent: "#6b4d8a",
+  },
+  {
+    id: "hla-testimonial-erieka",
+    title: "HLA Student Testimonial — Erieka",
+    category: "Testimonial",
+    aspectRatio: "9:16",
+    year: "2026",
+    description:
+      "A concise student testimonial shaped around an authentic voice, readable captions, and a clear emotional takeaway.",
+    role: "Video specialist",
+    tools: ["Premiere Pro", "After Effects"],
+    outcome: "A polished 20-second vertical testimonial prepared for social-first viewing.",
+    previewVideo: "/videos/testimonial-01.mp4?v=1",
+    previewPoster: "/videos/testimonial-01-frame.jpg",
+    fullVideo: "/videos/testimonial-01.mp4?v=1",
+    accent: "#3958d4",
+  },
+  {
+    id: "hla-testimonial-laurice",
+    title: "HLA Student Testimonial — Laurice",
+    category: "Testimonial",
+    aspectRatio: "9:16",
+    year: "2026",
+    description:
+      "A direct-to-camera testimonial refined with strong typography, focused pacing, and a consistent branded treatment.",
+    role: "Video specialist",
+    tools: ["Premiere Pro", "After Effects"],
+    outcome: "A focused 22-second vertical testimonial designed for clear mobile communication.",
+    previewVideo: "/videos/testimonial-02.mp4?v=1",
+    previewPoster: "/videos/testimonial-02-frame.jpg",
+    fullVideo: "/videos/testimonial-02.mp4?v=1",
+    accent: "#293a88",
   },
 ];
 
