@@ -4,11 +4,11 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import Script from "next/script";
 import { useEffect, useRef, useState } from "react";
-import { projects, siteConfig, skills, tools, type Project } from "@/data/projects";
+import { projects, services, siteConfig, type Project } from "@/data/projects";
 
 const navItems = [
   { label: "Work", href: "#work" },
-  { label: "About", href: "#about" },
+  { label: "Services", href: "#services" },
 ];
 
 function Reveal({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
@@ -84,7 +84,7 @@ export default function Portfolio() {
         <div className="hero-visual" aria-label="Portrait of Thirdy Razon"><div className="shape shape-purple" /><div className="shape shape-lime" /><div className="edit-badge">⌘ CUT</div><div className="availability">Available for projects</div><div className="hero-portrait"><Image src="/images/thirdy-portrait-cutout.png" alt="Thirdy Razon, video specialist" fill priority sizes="(max-width: 900px) 92vw, 46vw" /></div><div className="spark" aria-hidden="true">✦</div></div>
       </section>
       <section className="work-section" id="work" aria-labelledby="work-title"><h2 className="sr-only" id="work-title">Selected work</h2><div className="project-grid">{projects.map((project, index) => <ProjectCard key={project.id} project={project} index={index} onSelect={setActiveProject} />)}</div></section>
-      <section className="about-section" id="about" aria-labelledby="about-title"><Reveal className="about-lead"><p className="kicker">Behind the edits</p><h2 id="about-title">I don&apos;t just assemble footage. <span>I find the idea.</span></h2></Reveal><div className="about-grid"><Reveal className="about-copy"><p>{siteConfig.bio}</p><p>{siteConfig.philosophy}</p></Reveal><Reveal className="tool-panel" delay={0.08}><div><p className="detail-label">What I do</p><ul>{skills.map((skill) => <li key={skill}>{skill}</li>)}</ul></div><div><p className="detail-label">My toolkit</p><ul>{tools.map((tool) => <li key={tool}>{tool}</li>)}</ul></div></Reveal></div></section>
+      <section className="services-offered" id="services" aria-labelledby="services-title"><Reveal className="services-heading"><p>What I do</p><h2 id="services-title">Services offered</h2><span aria-hidden="true" /></Reveal><div className="services-offered-grid">{services.map((service, index) => <Reveal className="offered-card" delay={(index % 2) * 0.06} key={service.title}><span className={`offered-mark ${service.color}`} aria-hidden="true">{service.mark}</span><div><h3>{service.title}</h3><span className="card-rule" aria-hidden="true" /><p>{service.description}</p></div></Reveal>)}</div></section>
       <section className="contact-section" id="contact" aria-labelledby="contact-title"><div className="contact-copy"><p className="kicker">Need a specialist who sees the bigger picture?</p><h2 id="contact-title">Let&apos;s make your next video impossible to ignore.</h2><div className="contact-row"><a className="button button-dark" href={`mailto:${siteConfig.email}`}>Email Thirdy <Arrow /></a><p>{siteConfig.email}</p></div></div><div className="booking-panel" id="booking"><div className="calendly-inline-widget" data-url="https://calendly.com/razongerardo/30min" aria-label="Book a 30-minute consultation with Thirdy" /></div><Script id="calendly-widget" src="https://assets.calendly.com/assets/external/widget.js" strategy="afterInteractive" /></section>
     </main><footer><p>Thirdy Razon © 2026</p><p>Video specialist · Philippines</p><a href="#top">Back to top ↑</a></footer><AnimatePresence mode="wait">{activeProject && <ProjectDialog key={activeProject.id} project={activeProject} onClose={() => setActiveProject(null)} onNext={nextProject} />}</AnimatePresence></>
   );

@@ -29,9 +29,6 @@ export const siteConfig = {
   role: "Video Specialist & Creative Partner",
   statement: "Your search for a video specialist ends here. Hire someone who thinks strategically, not just executes.",
   email: "hello@thirdyrazon.com",
-  bio: "I shape raw footage into clear, emotionally precise stories that serve a real goal—not just a trend. Every cut earns its place, and every frame moves the message forward.",
-  philosophy:
-    "My process starts with feeling, then finds its rhythm—balancing performance, sound, motion, and color into work that stays with the audience.",
   socials: [
     { label: "Vimeo", href: "https://vimeo.com/" },
     { label: "YouTube", href: "https://youtube.com/" },
@@ -148,19 +145,31 @@ export const projects: Project[] = [
   },
 ];
 
-export const tools = [
-  "Premiere Pro",
-  "DaVinci Resolve",
-  "After Effects",
-  "Audition",
-  "Photoshop",
-];
-
-export const skills = [
-  "Story editing",
-  "Color grading",
-  "Motion graphics",
-  "Sound design",
+export const services = [
+  {
+    title: "Long-form Video",
+    description: "Structured edits built for clarity, retention, and story.",
+    mark: "16:9",
+    color: "purple",
+  },
+  {
+    title: "Short-form Video",
+    description: "Fast, platform-native cuts designed to stop the scroll.",
+    mark: "9:16",
+    color: "lime",
+  },
+  {
+    title: "AI Animation",
+    description: "Stylized AI-assisted motion that turns ideas into vivid visuals.",
+    mark: "AI",
+    color: "pink",
+  },
+  {
+    title: "AI UGC Videos",
+    description: "Scalable creator-style videos for campaigns, products, and brands.",
+    mark: "UGC",
+    color: "green",
+  },
 ];
 
 export const reel = {
