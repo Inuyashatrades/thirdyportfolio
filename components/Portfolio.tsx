@@ -36,6 +36,18 @@ function ProjectCard({ project, index, onSelect }: { project: Project; index: nu
   const ratioClass = `ratio-${project.aspectRatio.replace(":", "-")}`;
   const playPreview = () => videoRef.current?.play().catch(() => undefined);
   const stopPreview = () => { if (videoRef.current) { videoRef.current.pause(); videoRef.current.currentTime = 0; } };
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video || !window.matchMedia("(hover: none), (pointer: coarse)").matches) return;
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) video.play().catch(() => undefined);
+      else video.pause();
+    }, { threshold: 0.35 });
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
   return (
     <Reveal className={`project-reveal ${ratioClass}`} delay={(index % 4) * 0.05}>
       <article className="project-card" onMouseEnter={playPreview} onMouseLeave={stopPreview}>
