@@ -17,6 +17,9 @@ export type Project = {
     shares: string;
   };
   previewVideo?: string;
+  // A frame exported from the same video, shown only while mobile Safari loads
+  // or when autoplay is disabled (for example, in Low Power Mode).
+  previewPoster?: string;
   fullVideo?: string;
   youtubeId?: string;
   youtubeStart?: number;
@@ -61,6 +64,7 @@ export const projects: Project[] = [
     outcome: "A concise 1:02 social cut designed to hold attention from the opening frame.",
     analytics: { views: "71K", reactions: "1.7K", shares: "274" },
     previewVideo: "/videos/short-form-01.mp4",
+    previewPoster: "/videos/short-form-01-frame.jpg",
     fullVideo: "/videos/short-form-01.mp4",
     accent: "#ce532f",
   },
@@ -79,6 +83,7 @@ export const projects: Project[] = [
     outcome: "A focused 1:09 vertical cut prepared for social distribution.",
     analytics: { views: "140K", reactions: "4.1K", shares: "502" },
     previewVideo: "/videos/short-form-02.mp4",
+    previewPoster: "/videos/short-form-02-frame.jpg",
     fullVideo: "/videos/short-form-02.mp4",
     accent: "#695a8d",
   },
@@ -97,6 +102,7 @@ export const projects: Project[] = [
     outcome: "A 3:23 vertical piece with a clear progression and social-first presentation.",
     analytics: { views: "337K", reactions: "8.1K", shares: "1.4K" },
     previewVideo: "/videos/short-form-03.mp4",
+    previewPoster: "/videos/short-form-03-frame.jpg",
     fullVideo: "/videos/short-form-03.mp4",
     accent: "#256d73",
   },

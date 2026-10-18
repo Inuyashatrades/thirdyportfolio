@@ -52,7 +52,7 @@ function ProjectCard({ project, index, onSelect }: { project: Project; index: nu
     <Reveal className={`project-reveal ${ratioClass}`} delay={(index % 4) * 0.05}>
       <article className="project-card" onMouseEnter={playPreview} onMouseLeave={stopPreview}>
         <span className={`project-media ${ratioClass}`}>
-          {project.previewVideo && <video ref={videoRef} muted loop playsInline preload="metadata" aria-hidden="true"><source src={project.previewVideo} type="video/mp4" /></video>}
+          {project.previewVideo && <video ref={videoRef} muted loop playsInline preload="metadata" poster={project.previewPoster} aria-hidden="true"><source src={project.previewVideo} type="video/mp4" /></video>}
           {project.youtubeId && <iframe src={`https://www.youtube-nocookie.com/embed/${project.youtubeId}?controls=0&mute=1&rel=0${project.youtubeStart ? `&start=${project.youtubeStart}` : ""}`} title={`${project.title} preview`} loading="lazy" tabIndex={-1} aria-hidden="true" />}
           <span className="project-number">0{index + 1}</span><span className="project-action">View <Arrow /></span>
         </span>
@@ -77,7 +77,7 @@ function ProjectDialog({ project, onClose, onNext }: { project: Project; onClose
       <motion.div className="dialog-content" initial={{ y: 24 }} animate={{ y: 0 }} transition={{ duration: 0.42 }}>
         {!project.hideCategory && <p className="kicker">{project.category} / {project.year}</p>}<h2 id="project-dialog-title">{project.title}</h2><p className="dialog-lead">{project.description}</p>
         <div className={`dialog-video ${ratioClass}`}>
-          {project.youtubeId ? <iframe src={`https://www.youtube-nocookie.com/embed/${project.youtubeId}?rel=0${project.youtubeStart ? `&start=${project.youtubeStart}` : ""}`} title={`${project.title} video`} loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen /> : <video controls playsInline preload="metadata"><source src={project.fullVideo} type="video/mp4" /></video>}
+          {project.youtubeId ? <iframe src={`https://www.youtube-nocookie.com/embed/${project.youtubeId}?rel=0${project.youtubeStart ? `&start=${project.youtubeStart}` : ""}`} title={`${project.title} video`} loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen /> : <video controls playsInline preload="metadata" poster={project.previewPoster}><source src={project.fullVideo} type="video/mp4" /></video>}
         </div>
         <div className="dialog-details"><div><p className="detail-label">Role</p><p>{project.role}</p></div><div><p className="detail-label">Tools</p><p>{project.tools.join(", ")}</p></div><div><p className="detail-label">Outcome</p><p>{project.outcome}</p></div></div>
         <button className="next-project" type="button" onClick={onNext}>Next project <Arrow /></button>
