@@ -2,6 +2,7 @@ export type Project = {
   id: string;
   title: string;
   category: string;
+  format: "short-form" | "long-form";
   hideCategory?: boolean;
   // Use the video's real frame ratio. Supported values automatically control
   // both the work grid and the expanded video player.
@@ -55,6 +56,7 @@ export const projects: Project[] = [
     // Replace this placeholder title and description with the real client/campaign.
     title: "Facebook Reel",
     category: "Facebook Reel",
+    format: "short-form",
     hideCategory: true,
     aspectRatio: "9:16",
     year: "2024",
@@ -74,6 +76,7 @@ export const projects: Project[] = [
     // Replace this placeholder title and description with the real client/campaign.
     title: "Facebook Reel",
     category: "Facebook Reel",
+    format: "short-form",
     hideCategory: true,
     aspectRatio: "9:16",
     year: "2024",
@@ -93,6 +96,7 @@ export const projects: Project[] = [
     // Replace this placeholder title and description with the real client/campaign.
     title: "Facebook Reel",
     category: "Facebook Reel",
+    format: "short-form",
     hideCategory: true,
     aspectRatio: "9:16",
     year: "2025",
@@ -111,6 +115,7 @@ export const projects: Project[] = [
     id: "highlevel-commercial",
     title: "HighLevel Commercial",
     category: "Commercial",
+    format: "long-form",
     aspectRatio: "16:9",
     year: "2026",
     description:
@@ -127,6 +132,7 @@ export const projects: Project[] = [
     id: "work-from-home-guide",
     title: "Your Guide to $1,500/Month WFH Jobs",
     category: "YouTube",
+    format: "long-form",
     aspectRatio: "16:9",
     year: "2026",
     description:
@@ -142,6 +148,7 @@ export const projects: Project[] = [
     id: "wfh-websites-beginners",
     title: "5 WFH Websites for Beginners",
     category: "YouTube",
+    format: "long-form",
     aspectRatio: "16:9",
     year: "2026",
     description:
@@ -157,6 +164,7 @@ export const projects: Project[] = [
     id: "sales-call-breakdown",
     title: "Live Sales Call Breakdown",
     category: "Long-form",
+    format: "long-form",
     aspectRatio: "16:9",
     year: "2026",
     description:
@@ -171,6 +179,7 @@ export const projects: Project[] = [
     id: "ai-system",
     title: "Simple AI System",
     category: "Long-form",
+    format: "long-form",
     aspectRatio: "16:9",
     year: "2026",
     description:
@@ -186,6 +195,7 @@ export const projects: Project[] = [
     id: "julyna",
     title: "JULYNA",
     category: "Long-form",
+    format: "long-form",
     aspectRatio: "16:9",
     year: "2026",
     description:
@@ -200,6 +210,7 @@ export const projects: Project[] = [
     id: "hla-testimonial-erieka",
     title: "HLA Student Testimonial — Erieka",
     category: "Testimonial",
+    format: "short-form",
     aspectRatio: "9:16",
     year: "2026",
     description:
@@ -216,6 +227,7 @@ export const projects: Project[] = [
     id: "hla-testimonial-laurice",
     title: "HLA Student Testimonial — Laurice",
     category: "Testimonial",
+    format: "short-form",
     aspectRatio: "9:16",
     year: "2026",
     description:
