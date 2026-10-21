@@ -2,7 +2,7 @@ export type Project = {
   id: string;
   title: string;
   category: string;
-  format: "short-form" | "long-form";
+  format: "short-form" | "long-form" | "ai-animation";
   hideCategory?: boolean;
   // Use the video's real frame ratio. Supported values automatically control
   // both the work grid and the expanded video player.
@@ -239,6 +239,57 @@ export const projects: Project[] = [
     previewPoster: "/videos/testimonial-02-frame.jpg",
     fullVideo: "/videos/testimonial-02.mp4?v=1",
     accent: "#293a88",
+  },
+  {
+    id: "ai-ledger-economics",
+    title: "Economics Explained",
+    category: "AI Animation",
+    format: "ai-animation",
+    aspectRatio: "9:16",
+    year: "2026",
+    description:
+      "A fast-paced AI-animated economics story combining stylized characters, clear visual metaphors, and social-first captions.",
+    role: "AI animation specialist",
+    tools: ["AI Animation", "Premiere Pro", "After Effects"],
+    outcome: "A polished 31-second vertical explainer designed to make a financial concept immediately understandable.",
+    previewVideo: "/videos/ai-ledger-01.mp4?v=1",
+    previewPoster: "/videos/ai-ledger-01-frame.jpg",
+    fullVideo: "/videos/ai-ledger-01.mp4?v=1",
+    accent: "#6384cf",
+  },
+  {
+    id: "ai-ledger-everyone-rich",
+    title: "What If Everyone Had Money?",
+    category: "AI Animation",
+    format: "ai-animation",
+    aspectRatio: "9:16",
+    year: "2026",
+    description:
+      "A character-led AI animation that turns an abstract money scenario into a playful, easy-to-follow visual narrative.",
+    role: "AI animation specialist",
+    tools: ["AI Animation", "Premiere Pro", "After Effects"],
+    outcome: "A 32-second animated social story built around curiosity, clarity, and visual momentum.",
+    previewVideo: "/videos/ai-ledger-02.mp4?v=1",
+    previewPoster: "/videos/ai-ledger-02-frame.jpg",
+    fullVideo: "/videos/ai-ledger-02.mp4?v=1",
+    accent: "#e6c91f",
+  },
+  {
+    id: "ai-ledger-spacex",
+    title: "The $40B SpaceX Chip Loan",
+    category: "AI Animation",
+    format: "ai-animation",
+    aspectRatio: "9:16",
+    year: "2026",
+    description:
+      "An AI-animated business story using cinematic scale, bold captions, and visual contrast to explain a headline-sized idea.",
+    role: "AI animation specialist",
+    tools: ["AI Animation", "Premiere Pro", "After Effects"],
+    outcome: "A 35-second vertical animation shaped for fast comprehension and sustained attention.",
+    previewVideo: "/videos/ai-ledger-03.mp4?v=1",
+    previewPoster: "/videos/ai-ledger-03-frame.jpg",
+    fullVideo: "/videos/ai-ledger-03.mp4?v=1",
+    accent: "#a88632",
   },
 ];
 
